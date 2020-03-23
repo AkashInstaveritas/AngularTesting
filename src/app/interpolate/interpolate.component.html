@@ -1,0 +1,32 @@
+
+
+<h2>Welcome {{name}}</h2>
+<h2>{{2+2}}</h2>
+<h2>{{ "Welcome" + name }}</h2>
+<h2>{{ name.length }}</h2>
+<h2>{{ name.toUpperCase() }}</h2>
+<h2>{{ greetUser() }}</h2>
+
+<input bind-disabled="isDisabled" id="{{ myId }}" type="text" value="singh">
+
+
+
+<h1>Class binding</h1>
+<h2 [class]="successClass">Class Binding</h2>
+<h2 class="text-special" [class]="successClass">Class Second Binding</h2>
+<h2 [class.text-danger] = "hasError">Class Third Binding</h2>
+<h2 [ngClass]="messageClasses">Class Fourth Binding</h2>
+
+<br>
+
+<h1>Style Binding</h1>
+<h2 [style.color] = "'orange'">Style Binding</h2>
+<h2 [style.color] = "hasError ? 'red' : 'green'">Style Second Binding</h2>
+<h2 [style.color] = "highlightColor">Style Third Binding</h2>
+<h2 [ngStyle]="titleStyles">Style Fourth Binding</h2>
+
+<br>
+
+<h1>Event Binding</h1>
+<button (click) = "onClick($event)">Greet</button>
+{{greeting}}
