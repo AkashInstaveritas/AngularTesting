@@ -1,0 +1,28 @@
+<br>
+<h1>Pipes works!</h1>
+
+<h3>{{ name | lowercase }}</h3>
+<h3>{{ name | uppercase }}</h3>
+<h3>{{ message | titlecase }}</h3>
+<h3>{{ name | slice:3:5 }}</h3>
+
+<h2>Json Pipes</h2>
+<h3>{{ person | json }}</h3>
+
+<h2>NUmber Pipes</h2>
+<h3>{{ 5.678 | number:'1.2-3' }}</h3>
+<h3>{{ 5.678 | number:'3.4-5' }}</h3>
+<h3>{{ 5.678 | number:'3.1-2' }}</h3>
+
+<h2>Percent Pipe</h2>
+<h3>{{ 0.25 | percent }}</h3>
+
+<h2>Currency Pipe</h2>
+<h3>{{ 0.25 | currency }}</h3>
+<h3>{{ 0.25 | currency: 'INR' }}</h3>
+
+<h2>Date Pipe</h2>
+<h3>{{ date }}</h3>
+<h3>{{ date | date:'short' }}</h3>
+<h3>{{ date | date:'shortDate' }}</h3>
+<h3>{{ date | date:'shortTime' }}</h3>

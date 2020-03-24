@@ -1,0 +1,29 @@
+<br>
+<h1>Structuraldirectives works!</h1>
+
+<h2>ngIf Directive</h2>
+<h3 *ngIf="displayName">If condition works</h3>
+<h3 *ngIf="displayName; else elseBlock">If condition works.</h3>
+
+<p>Alternative syntax</p>
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h3>If conditons works!</h3>
+</ng-template>
+<ng-template #elseBlock>
+  <h3>Else condition works!</h3>
+</ng-template>
+
+<h2>ngSwitch Directive</h2>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">Red</div>
+  <div *ngSwitchCase="'green'">Green</div>
+  <div *ngSwitchCase="'blue'">Blue</div>
+  <div *ngSwitchDefault>Pick Again</div>
+</div>
+
+<h2>ngFor Directive</h2>
+<div *ngFor="let color of colors">
+  <h3>{{color}}</h3>
+</div>
