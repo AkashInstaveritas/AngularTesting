@@ -9,11 +9,18 @@ import { EmployeesService } from '../employees.service';
 export class EmployeesdetailsComponent implements OnInit {
 
   public employees = [];
+
+  // child to parent communication
+
   constructor(private _employeeService: EmployeesService) { }
 
   ngOnInit(): void {
-    this._employeeService.getEmployees()
-        .subscribe(data => this.employees = data);
+    // Event
+    // fire() publish()
+    //
+    this._employeeService.getEmployees().subscribe(
+      data => this.employees = data
+    );
   }
 
 }

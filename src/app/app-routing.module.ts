@@ -12,6 +12,7 @@ import { StructuraldirectivesComponent } from './structuraldirectives/structural
 import { InterpolateComponent } from './interpolate/interpolate.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { TemplatereferencevariablesComponent } from './templatereferencevariables/templatereferencevariables.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'pipes', component: PipesComponent},
   {path: 'twoWay-binding', component:TwowaybindingComponent},
   {path: 'template-reference', component:TemplatereferencevariablesComponent},
+  {path: 'template-driven-form', component:TemplateDrivenFormComponent},
   {path: "**", component: PageNotFoundComponent}
 ];
 
@@ -50,4 +52,5 @@ export const routingComponents = [DepartmentListComponent,
                                   PageNotFoundComponent,
                                   PipesComponent,
                                   TwowaybindingComponent,
-                                  TemplatereferencevariablesComponent];
+                                  TemplatereferencevariablesComponent,
+                                  TemplateDrivenFormComponent];
