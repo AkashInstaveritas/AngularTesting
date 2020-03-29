@@ -7,17 +7,25 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ComponentinteractionComponent implements OnInit {
 
-  @Input('parentData') public name;
+  @Input('parentData') public name: string;
 
-  @Output() public childEvent = new EventEmitter();
+  @Input('age') public age: number = 18;
+
+  @Output() public childEvent = new EventEmitter<any>();
+
+  @Output() public userExited = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   fireEvent() {
-    this.childEvent.emit('CHild to parent interaction works!');
+
+    this.userExited.emit('himanshu');
+
+    this.childEvent.emit('Child to parent interaction works!');
   }
 
 }

@@ -9,4 +9,10 @@ export class AppComponent {
   title = 'Angular Testing';
   public name = "Akash";
   public message = "";
+
+  onUserExit($name:string): void {
+    //
+  }
+
+
 }
