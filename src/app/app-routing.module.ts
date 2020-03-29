@@ -13,6 +13,7 @@ import { InterpolateComponent } from './interpolate/interpolate.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { TemplatereferencevariablesComponent } from './templatereferencevariables/templatereferencevariables.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'twoWay-binding', component:TwowaybindingComponent},
   {path: 'template-reference', component:TemplatereferencevariablesComponent},
   {path: 'template-driven-form', component:TemplateDrivenFormComponent},
+  {path: 'reactive-form', component:ReactiveFormComponent},
   {path: "**", component: PageNotFoundComponent}
 ];
 
@@ -53,4 +55,5 @@ export const routingComponents = [DepartmentListComponent,
                                   PipesComponent,
                                   TwowaybindingComponent,
                                   TemplatereferencevariablesComponent,
+                                  ReactiveFormComponent,
                                   TemplateDrivenFormComponent];

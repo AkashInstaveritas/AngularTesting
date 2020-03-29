@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { EnrollmentService } from '../enrollment.service';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -13,6 +14,7 @@ export class TemplateDrivenFormComponent implements OnInit {
   userModel = new User('Rob', 'rob@gmail.com', 981028349, '', 'morning', true);
 
   topicHasError = true;
+  submitted = false;
 
   validateTopic(value)
   {
@@ -26,9 +28,18 @@ export class TemplateDrivenFormComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private _enrollmentService: EnrollmentService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit()
+  {
+    this.submitted = true;
+    this._enrollmentService.enroll(this.userModel).subscribe(
+      data => console.log('success!', data),
+      error => console.log('Error!', error)
+    );
   }
 
 }

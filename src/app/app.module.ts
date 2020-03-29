@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     DepartmentOverviewComponent,
     DepartmentContactComponent,
     MainNavComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    ReactiveFormsModule
   ],
   providers: [EmployeesService],
   bootstrap: [AppComponent]
